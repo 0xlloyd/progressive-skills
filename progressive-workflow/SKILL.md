@@ -1,13 +1,13 @@
 ---
 name: progressive-workflow
-description: 'Use when the user says "flow", "use flow", "/flow" or "/progressive-workflow", or wants the right process for a big task rather than a fixed pipeline, even if they don''t say "flow". Designs a bespoke workflow from how expert practitioners do that kind of work, then runs it end to end with approval gates. Saves the flow to a library and improves it after every run, so the next similar task starts from a proven process instead of a blank page.'
+description: 'Design a bespoke workflow (a flow) from how expert practitioners do that kind of work, run it end to end with approval gates, and save it to a library that improves after every run, so the next similar task starts from a proven process instead of a blank page. Use when the user says "flow", "use flow", "/flow" or "/progressive-workflow", or wants the right process for a big task rather than a fixed pipeline, even if they don''t say "flow".'
 metadata:
   category: progressive
   tags: [workflow, process]
-  source: https://github.com/0xlloyd/flow
+  source: https://github.com/0xlloyd/progressive-skills
 ---
 
-# Flow
+# Progressive Workflow
 
 ## Purpose
 
@@ -15,21 +15,21 @@ A fixed pipeline runs every task through the same steps, but each kind of work w
 This skill designs that process first, from how the best practitioners do the work, then runs it and keeps it, so the process improves each time the same kind of task comes back.
 Every run produces two things: the work itself, and a saved flow that records the process, what it checked and what was learned.
 
-## Step 1: Frame the task
+## Frame the task
 
 Pin down in three to five bullets what is being made or decided, who it's for, what done looks like, and the constraints already known, such as format, audience, deadline or brand.
 Check the user's stored preferences and memory for anything that changes the process, and turn each one into a step or a check in the flow rather than an afterthought, because a correction the user has already given once should never need giving again.
 Ask at most one or two questions, and only ones whose answer changes the shape of the flow, such as who it's for or what format it ends in, since questions about content can wait for the research.
 Play the frame back to the user and get their confirmation before going further, because a wrong frame sends the whole flow in the wrong direction.
 
-## Step 2: Check the flow library
+## Check the flow library
 
-Before designing anything, look in the flow library (see Step 9) for a saved flow that fits this kind of task, matching on the task type and the "use when" line at the top of each file.
+Before designing anything, look in the flow library (see Save the flow) for a saved flow that fits this kind of task, matching on the task type and the "use when" line at the top of each file.
 If one fits, treat it as the baseline: run it as saved unless this task clearly needs a change, and name each planned change and its reason when presenting the flow, because without a stable baseline there's no way to tell whether a change actually helped.
-If a saved flow fits, skip the process research in Step 3 except for anything the flow's changelog or this task's differences flag as missing, and go straight to presenting the flow in Step 5.
-If a saved flow is related but doesn't fit, don't adapt it; design a new flow, borrowing any step or check from it that the research in Step 3 confirms this task needs.
+If a saved flow fits, skip the process research except for anything the flow's changelog or this task's differences flag as missing, and go straight to presenting the flow.
+If a saved flow is related but doesn't fit, don't adapt it; design a new flow, borrowing any step or check from it that the process research confirms this task needs.
 
-## Step 3: Research how the work is best done
+## Research how the work is best done
 
 This is the heart of the skill, because a flow is only as good as the expertise built into it, so research the process thoroughly rather than quickly: the aim is to find how the best practitioners actually run this kind of work, not to do the task yet.
 Before searching, reframe the task the way a top professional in the field would see it, naming what they would treat as the real problem and the real bar, because an ambitious or vague request researched at face value finds only the average process; use the `go-deeper` skill for this if it's installed, and otherwise do the reframing directly.
@@ -41,7 +41,7 @@ Note which tools and connectors the flow needs, such as web or image search, out
 Search past conversations and memory for earlier runs of similar work and the corrections the user made then, because a correction given last time is a step or check this time.
 Share the findings with the user as a short summary with sources, covering the bar-setters, the stages and checks experts insist on, and any disagreements, so they can steer the process before it's composed.
 
-## Step 4: Compose the flow
+## Compose the flow
 
 Start from the six-step spine below, which most flows keep, and cut any step only with a stated reason:
 
@@ -63,7 +63,7 @@ Draft the flow's Verify list as a short set of checks to confirm after the work 
 Scale the flow to the task, so a quick piece of work might have four steps and a launch campaign twelve.
 Before presenting, check the composed flow as a whole: every step's inputs come from an earlier step, no two steps do the same job, and nothing in the definition of done is left without a step that produces it.
 
-## Step 5: Present the flow
+## Present the flow
 
 Present the flow compactly in this format:
 
@@ -82,9 +82,9 @@ Added beyond the spine: [step, one line on why]
 Cut from the spine: [step and why, or "nothing"]
 ```
 
-Ask the user to approve, edit or reorder it, and wait for their answer, unless they've said "just run it", in which case skip this gate and the check-ins in Steps 1 and 3, and stop only at the plan.
+Ask the user to approve, edit or reorder it, and wait for their answer, unless they've said "just run it", in which case skip this gate and the check-ins after framing and research, and stop only at the plan.
 
-## Step 6: Run the flow
+## Run the flow
 
 Set up a task list with one item per flow step and tick each off as it finishes, so the user can see progress if they step away.
 Work through the steps in order, announcing each in one short line, reading the instructions of any skill a step uses before using it, and carrying on until that step's "done when" is met.
@@ -93,22 +93,22 @@ At the Plan gate, cover the approach, the deliverables and their format, and the
 Where the plan involves a judgement call, such as strategy, prioritisation or a commercial or people decision, lay out the options with their trade-offs and let the user choose, while for tasks with an objectively right answer, just plan the execution.
 Deliver outputs in the format the work calls for as soon as they're useful, so the user can redirect early rather than at the end.
 
-## Step 7: Verify
+## Verify
 
 Verify always runs and is never a formality, because work that grades itself without a real check ships its own mistakes.
-Confirm the output against each step's "done when", the definition of done from Step 1, the flow's Verify checks, the rules of every skill used, and the user's stored preferences.
+Confirm the output against each step's "done when", the definition of done from the frame, the flow's Verify checks, the rules of every skill used, and the user's stored preferences.
 Open what was made rather than trusting it: render the deck, open the document, view the page, and run the numbers.
 For high-stakes work, have a fresh agent that hasn't seen the work being produced review it against the definition of done, and if subagents aren't available, re-read the output as its intended audience would, checking only for what they need.
 Fix what the checks find before presenting the work, and name the weakest remaining element honestly rather than leaving the user to discover it.
 
-## Step 8: Review the run
+## Review the run
 
 Review the run with four questions: what was intended, what actually happened, why the two differed, and what to change or repeat next time.
 Capture what worked as well as what went wrong, and look for causes in the process rather than blame, because a step that worked is as worth keeping as a gap is worth fixing.
 Sort each lesson into where it belongs: facts about the user or their world go to memory, lessons about this kind of task go into the flow, and problems with a skill used along the way become a specific suggested fix for that skill.
 Turn lessons about the task into edits to the flow's steps and Verify checks themselves, keeping only checks that caught a real problem or guard against a costly one, rather than appending notes that pile up unread.
 
-## Step 9: Save the flow
+## Save the flow
 
 The flow library is a single folder holding one markdown file per task type, such as `Flows/linkedin-carousel.md` or `Flows/business-case.md`.
 Use the library location the user has given; if none is known, ask once, and use a `Flows/` folder until they answer.
@@ -118,10 +118,10 @@ Name the file after the task type, not the specific task, in lowercase with hyph
 Build the file from `references/flow-template.md`, and write it so someone reading it months later, with no memory of the original task, could run the flow on its own.
 If the task is unlikely to recur, say so and ask whether to save the flow anyway, rather than filling the library with flows nobody will run again.
 
-## Output order
+## Output
 
 End the run with a short summary in this order: what was made, the flow used and where it was saved, the two or three most important lessons, any suggested skill fixes, and the sources.
 
 ## Close
 
-End by running `progressive-skill-improvement` on this skill so lessons about how the flow skill itself worked improve the next run; if it isn't installed, suggest any improvements to this skill directly for the user to approve.
+End by running `progressive-skill-improvement` on this skill so lessons from the session improve the next run; if it isn't installed, suggest any improvements to this skill directly for the user to approve.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive Skill Creation"
+  short_description: "Co-create a skill one approved sentence at a time"
+  default_prompt: "Use $progressive-skill-creation to build a new skill with me step by step."

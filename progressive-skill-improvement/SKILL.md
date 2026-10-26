@@ -4,12 +4,12 @@ description: 'At the end of a session, review how a skill was used and propose s
 metadata:
   category: progressive
   tags: [skills, self-learning]
-  source: Lloyd's own skill, from Session self learning-v2.zip (was session-self-learning)
+  source: https://github.com/0xlloyd/progressive-skills
 ---
 
 # Progressive Skill Improvement
 
-## Why
+## Purpose
 
 A lesson only counts once it changes the skill: noting what went wrong without editing the instructions means it was observed, not learned, and the same mistake will come back.
 Aim to fix the cause rather than the symptom, so one edit prevents a whole class of future mistakes instead of patching a single case.
@@ -37,15 +37,15 @@ First show the user the list of lessons, one line each with its type and evidenc
 Then present each edit one sentence at a time, showing the current wording (if any) next to the proposed wording and where it sits in the skill, and wait for the user to reply `ok`, give an edit or say `cut`.
 For a removal, quote the exact sentence to be removed and ask the user to confirm, since deleting a line can quietly drop behaviour the skill relied on.
 
-## Update and deliver
-
-Apply only the approved edits to the full SKILL.md, keeping every other line exactly as it was, and show the user a short summary of what changed.
-If the skill lives in the user's skills bank (such as `~/Documents/Skills Bank`), edit the SKILL.md there, since the bank is the source and its installed copies are links to it.
-Otherwise, deliver the updated skill in the way the environment allows: a save card that replaces the existing skill where one is offered, otherwise the updated SKILL.md and a zipped skill folder for download.
-
 ## Limits
 
 Edit only the skill that was used in the session; if a lesson belongs to a different skill or to the user's general preferences, mention it in one line and leave it for the user to decide.
 If several skills were used, ask which one to review.
 If nothing in the session is worth changing, say so plainly instead of inventing lessons, because a needless edit makes the skill worse.
 Unlike the skills that close by running it, don't apply this skill to itself unless the user asks, so it never loops.
+
+## Output
+
+Apply only the approved edits to the full SKILL.md, keeping every other line exactly as it was, and show the user a short summary of what changed.
+If the skill lives in a folder or git repository the user maintains (such as a skills bank or `~/progressive-skills`), edit the SKILL.md there, since that is the source and its installed copies are links to it, and if it's a git repository, offer to commit and push the change so the user's other machines pick it up.
+Otherwise, deliver the updated skill in the way the environment allows: a save card that replaces the existing skill where one is offered, otherwise the updated SKILL.md and a zipped skill folder for download.

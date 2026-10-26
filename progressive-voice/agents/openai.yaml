@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive Voice"
+  short_description: "Build a voice skill that writes and talks like you"
+  default_prompt: "Use $progressive-voice to interview me and build a voice skill that writes like me."

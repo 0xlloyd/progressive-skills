@@ -1,38 +1,27 @@
-# Best in Class
+# Progressive Knowledge
 
 **Not the typical answer. The standard the best practitioners actually work to.**
 
-An AI skill that replaces the popular, search-optimised answer with the elite standard for a task, then does the work (or rebuilds yours) to that bar, and saves the standard as a knowledge file so the next run in that domain starts from it.
+Replaces the popular, search-optimised answer with the elite standard for a task, does the work (or rebuilds yours) to that bar, and saves the standard as a knowledge file so the next run in that domain starts from it.
 
 ## How it works
 
-1. **Define best, and check with you.** It names the domain, the people who set the bar (chosen by demonstrated results, not fame) and what best optimises for here, then plays this back for your confirmation.
-2. **Check the library.** If a knowledge file for the topic already exists, it builds on it rather than starting over.
-3. **Research the elite standard.** Academic papers, practitioner books, professional bodies and expert write-ups, looking for what separates best from good and the defaults experts reject.
-4. **Share the findings, and check with you again.** A short summary with sources, so you can steer the standard before it shapes the work.
-5. **Build the rubric.** 5–7 criteria that describe quality rather than counts, each tagged High, Medium or Low confidence.
-6. **Adapt to your context.** It carries over why each practice works, not the practice itself.
-7. **Do or review the work.** It builds to the rubric, or scores your draft, gives an honest verdict and delivers the full rebuilt version, ending with a short generic vs best-in-class comparison.
-8. **Save the knowledge file.** In a folder you own where possible, otherwise your assistant's built-in storage, otherwise as a download.
+1. **Define best:** the domain, the people who set the bar (chosen by results, not fame) and what best optimises for, played back for your confirmation.
+2. **Check the library:** if a knowledge file for the topic exists, it builds on it instead of starting over.
+3. **Research the elite standard:** papers, practitioner books, professional bodies and expert write-ups, looking for what separates best from good.
+4. **Share the findings:** a short summary with sources, so you can steer the standard before it shapes the work.
+5. **Build the rubric:** five to seven criteria that describe quality, each tagged High, Medium or Low confidence.
+6. **Adapt to your context:** it carries over why each practice works, not the practice itself.
+7. **Do or review the work:** it builds to the rubric, or scores your draft and delivers the rebuilt version, ending with a generic vs best-in-class comparison.
+8. **Save the knowledge file:** in a folder you own where possible, otherwise your assistant's storage, otherwise as a download.
 
-## Files
+## What you get
 
-- [SKILL.md](SKILL.md) — the workflow.
-- [references/knowledge-file-template.md](references/knowledge-file-template.md) — the template for each saved knowledge file.
-- [agents/openai.yaml](agents/openai.yaml) — optional display metadata and a suggested prompt.
-- [README.md](README.md) — usage and licence.
+- The work, done or rebuilt to the standard
+- A short generic vs best-in-class comparison
+- A knowledge file per topic, such as `Pastry/laminated-dough.md`, that later runs build on
 
 ## Use
-
-Install with the [Skills CLI](https://github.com/vercel-labs/skills):
-
-```bash
-npx skills add 0xlloyd/best-in-class --skill best-in-class
-```
-
-For manual installation, use this repository root as the skill folder in your host's documented custom-skills location. You can also attach [SKILL.md](SKILL.md) and the [template](references/knowledge-file-template.md) to a conversation and ask your AI tool to follow them.
-
-Example prompts:
 
 > Give me a best-in-class croissant recipe.
 
@@ -40,35 +29,30 @@ Example prompts:
 
 > What does best in class look like for a product requirements document?
 
-Fresh research needs web access; without it, the skill builds the standard from what the model already knows and marks it unverified. Tell your assistant where your knowledge library lives, and keep private notes outside this public repository. It ends by running a `session-self-learning` skill if you have one, or suggesting improvements to itself if you don't. Behaviour depends on the host and model.
+## Files
 
-Created by [Lloyd Bizaoui](https://github.com/0xlloyd).
-
-<details>
-<summary>MIT License</summary>
-
-```text
-MIT License
-
-Copyright (c) 2026 Lloyd Bizaoui
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+```
+progressive-knowledge/
+  SKILL.md                               the workflow
+  references/knowledge-file-template.md  the template for each saved knowledge file
+  agents/openai.yaml                     display metadata and a suggested prompt
 ```
 
-</details>
+## Install
+
+Part of [progressive-skills](../README.md). To install all six and keep them in sync across machines:
+
+```bash
+git clone https://github.com/0xlloyd/progressive-skills.git ~/progressive-skills
+~/progressive-skills/install.sh
+```
+
+To install only this skill, run `npx skills add 0xlloyd/progressive-skills --skill progressive-knowledge`, or copy the `progressive-knowledge/` folder into your skills directory (`~/.claude/skills/` for Claude Code). For Claude, you can also zip the folder and upload it as a custom skill.
+
+## Works with
+
+Works on its own. Fresh research needs web access; without it, the skill builds the standard from what the model knows and marks it unverified. Tell your assistant where your knowledge library lives, and keep private notes out of public repositories. It closes every run with [progressive-skill-improvement](../progressive-skill-improvement/README.md), which proposes evidence-backed edits to this skill for you to approve. If that skill isn't installed, it suggests the improvements directly.
+
+## License
+
+MIT. See [LICENSE](../LICENSE). Created by [Lloyd Bizaoui](https://github.com/0xlloyd).

@@ -1,13 +1,13 @@
 ---
 name: progressive-voice
-description: "Build a personal voice skill that makes an LLM write and talk like the user, drawing mainly on a short, conversational interview plus any writing they already have, so it works even for people who rarely write. Use it whenever the user wants their AI to sound like them, capture their voice or writing style, stop sounding like ChatGPT, or build a \"write like me\" skill, even if they never say the word \"skill\"."
+description: "Build a personal voice skill that makes an LLM write and talk like the user, drawing mainly on a short, conversational interview plus any writing they already have, so it works even for people who rarely write. Use whenever the user wants their AI to sound like them, capture their voice or writing style, stop sounding like ChatGPT, or build a \"write like me\" skill, even if they never say the word \"skill\"."
 metadata:
   category: progressive
   tags: [writing, voice]
-  source: https://github.com/0xlloyd/voice-builder
+  source: https://github.com/0xlloyd/progressive-skills
 ---
 
-# Voice Builder
+# Progressive Voice
 
 ## Purpose
 
@@ -63,7 +63,7 @@ For the examples file, pick three to five real excerpts that cover different sit
 Keep the template's learning loop, so whenever the user edits or corrects a draft, their voice skill offers to save the fix to its own files and keeps getting closer over time.
 Write the new skill's description so it triggers whenever the user asks for anything written or said on their behalf (emails, messages, posts, scripts, replies), not only when they mention their voice.
 
-## Deliver
+## Output
 
 Deliver the finished skill however the environment allows (a save card where one is offered, otherwise a zipped folder to download) with a one-line note on where to install it.
 If the user keeps a skills bank (a folder of skills sorted into category folders, such as `~/Documents/Skills Bank`), save the voice skill folder into its `writing/` category and run the bank's link script instead, so it is installed alongside their other writing skills.

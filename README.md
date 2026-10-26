@@ -1,14 +1,27 @@
 # progressive-skills
 
-Agent skills that build something with you in stages, each step feeding the next, with you approving as it goes.
+**Research the craft. Approve every step. Keep what you learn.**
+
+Agent skills that build something with you in stages, each step feeding the next, with you approving as it goes. Each one researches how the best practitioners do the work, keeps you as the decision-maker, and ends by improving itself from the session.
 
 | Skill | What it does |
 |-------|--------------|
-| [progressive-workflow](progressive-workflow/SKILL.md) | Designs an expert workflow for a big task, runs it with approval gates, saves it to a library |
-| [progressive-skill](progressive-skill/SKILL.md) | Co-writes a new skill one approved sentence at a time |
-| [progressive-knowledge](progressive-knowledge/SKILL.md) | Sets the elite-practitioner standard for a task, does the work to it, saves a knowledge file |
-| [progressive-voice](progressive-voice/SKILL.md) | Interviews you and builds a voice skill that writes and talks like you |
-| [progressive-skill-improvement](progressive-skill-improvement/SKILL.md) | After a session, proposes evidence-backed edits to the skill that was used; every other progressive skill runs it as its closing step |
+| [progressive-design-system](progressive-design-system/README.md) | Builds a bespoke design system in a few visual rounds of ten directions: W3C tokens, DESIGN.md and a live specimen |
+| [progressive-knowledge](progressive-knowledge/README.md) | Sets the standard elite practitioners work to, does the work to it, and saves a knowledge file |
+| [progressive-skill-creation](progressive-skill-creation/README.md) | Co-writes a new skill with you, one approved sentence at a time |
+| [progressive-voice](progressive-voice/README.md) | Interviews you and builds a voice skill that writes and talks like you |
+| [progressive-workflow](progressive-workflow/README.md) | Designs the expert process for a big task, runs it with approval gates, and saves it to a library |
+| [progressive-skill-improvement](progressive-skill-improvement/README.md) | Turns what a session taught into edits you approve; every other progressive skill runs it as its closing step |
+
+## Shared format
+
+Every skill follows the same shape, so they read as one set:
+
+- **`SKILL.md`:** frontmatter with `name`, a `description` that says what the skill does and then when to use it, and `metadata` (`category: progressive`, `tags`, `source`). The body opens with **Purpose**, works through plain-named sections, and ends with **Output** and **Close**, where Close runs `progressive-skill-improvement` (which itself ends at Output, so it never runs on itself).
+- **`README.md`:** tagline, intro, How it works, What you get, Use, Files, Install, Works with, License.
+- **`agents/openai.yaml`:** display name, short description and a suggested prompt.
+
+New skills follow the same shape. `progressive-skill-creation` writes the closing step for you.
 
 ## Install
 

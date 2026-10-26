@@ -1,15 +1,15 @@
 ---
-name: progressive-skill
-description: 'Co-create a new skill with the user step by step: clarifying questions, research into how experts do the task, a plan they approve, then every sentence drafted one at a time for their edit before the skill is assembled, tested and delivered. Use whenever the user wants to build, design or write a new skill together or progressively, or says things like "create a skill with me", "build a skill step by step" or "progressive skill", but not for quick one-shot skills or for testing and improving an existing skill, which `skill-creator` handles.'
+name: progressive-skill-creation
+description: 'Co-create a new skill with the user step by step: clarifying questions, research into how experts do the task, a plan they approve, then every sentence drafted one at a time for their edit before the skill is assembled, tested and delivered. Use whenever the user wants to build, design or write a new skill together or progressively, or says things like "create a skill with me", "build a skill step by step", "progressive skill" or "progressive skill creation", but not for quick one-shot skills or for testing and improving an existing skill, which `skill-creator` handles.'
 metadata:
   category: progressive
   tags: [skills, engineering]
-  source: https://github.com/0xlloyd/progressive-skill-creation
+  source: https://github.com/0xlloyd/progressive-skills
 ---
 
 # Progressive Skill Creation
 
-## Why progressive
+## Purpose
 
 This skill keeps the user as the author: the assistant researches, proposes and drafts, but nothing enters the skill until the user has approved it in their own words.
 Each gate exists because mistakes are cheapest to fix early, so never skip one to save time.
@@ -54,17 +54,17 @@ After the read-back, use `skill-creator` to test the skill: draft realistic test
 For a process skill whose output is a conversation rather than a file, a live run of the skill on a real task counts as the test, alongside trigger checks on the description.
 Any change the tests suggest goes back through the same sentence-by-sentence approval before it enters the skill.
 
-## Deliver
-
-Deliver the finished skill in the way the environment allows: a save card where one is offered, plus the SKILL.md and a zipped skill folder for download.
-
-## Close
-
-End the session by running `progressive-skill-improvement` on this skill, so lessons from building it improve the next run; if that skill isn't installed, propose any improvements to this skill directly for the user to approve.
-
 ## Rules for every skill created
 
 Write every skill for anyone to use: refer to "the user", never a named person, company or private detail.
 End every skill created, except `progressive-skill-improvement` itself, with a closing step that runs `progressive-skill-improvement`, so each skill keeps improving from real use.
 When a skill calls another skill, add a fallback for users who don't have it installed, so the skill still works on its own.
 Make every skill understandable on its own: it can call other skills, but explain in its own words any rule or term it borrows from them, so it still makes sense to someone who has only that one installed.
+
+## Output
+
+Deliver the finished skill in the way the environment allows: a save card where one is offered, plus the SKILL.md and a zipped skill folder for download.
+
+## Close
+
+End by running `progressive-skill-improvement` on this skill so lessons from the session improve the next run; if it isn't installed, suggest any improvements to this skill directly for the user to approve.

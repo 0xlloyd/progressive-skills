@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive Skill Improvement"
+  short_description: "Turn what a session taught into approved edits to the skill"
+  default_prompt: "Use $progressive-skill-improvement to review how the skill went in this session and propose edits for me to approve."

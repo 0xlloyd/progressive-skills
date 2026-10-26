@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive Design System"
+  short_description: "Build a bespoke design system in a few visual rounds"
+  default_prompt: "Use $progressive-design-system to build a design system with me, from brief and inspirations to tokens, DESIGN.md and a specimen."

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[System name] Specimen</title>
+<!--
+  Specimen shell for progressive-design-system.
+  How to fill it:
+  1. Replace the custom properties in :root with the system's tokens (keep names in sync with tokens.json).
+  2. Load the chosen fonts (a <link> to the font service, or @font-face for self-hosted files).
+  3. Replace every [bracketed] placeholder with the user's real copy and decisions.
+  4. Delete sections for layers not yet decided, or leave them showing "Not yet decided".
+  5. Show every medium in the brief: web components as assembled pages (nav, hero, footer, forms, states),
+     social templates at their real proportions (draw at full size and scale down), and motion running live.
+  The shell is deliberately plain so it never imposes a look: everything visible should come from the tokens.
+-->
+<style>
+  :root {
+    /* Colour roles */
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: #111111;
+    --color-text-muted: #555555;
+    --color-border: #cccccc;
+    --color-primary: #333333;
+    --color-on-primary: #ffffff;
+    --color-focus: #333333;
+    --color-success: #2b7a3d;
+    --color-warning: #8a6100;
+    --color-error: #b3261e;
+    --color-info: #1f5fa8;
+
+    /* Type */
+    --font-display: serif;
+    --font-text: sans-serif;
+    --font-mono: monospace;
+    --size-caption: 12px;
+    --size-body: 16px;
+    --size-h3: 20px;
+    --size-h2: 28px;
+    --size-h1: 48px;
+    --lh-body: 1.5;
+    --lh-heading: 1.1;
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /* Space, shape, elevation, motion */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-4: 16px;
+    --space-8: 32px;
+    --space-16: 64px;
+    --radius-sm: 2px;
+    --border-width: 1px;
+    --shadow-raised: 0 2px 4px rgba(0, 0, 0, 0.12);
+    --duration-standard: 240ms;
+    --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+    --max-width: 1080px;
+  }
+  /* Optional dark mode: redefine the colour roles here if the system has one. */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { }
+  }
+  :root[data-theme="dark"] { }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-size: var(--size-body);
+    line-height: var(--lh-body);
+  }
+  main { max-width: var(--max-width); margin: 0 auto; padding: var(--space-8) var(--space-4); }
+  section { padding: var(--space-8) 0; border-top: var(--border-width) solid var(--color-border); }
+  h1, h2, h3 { font-family: var(--font-display); line-height: var(--lh-heading); margin: 0 0 var(--space-4); }
+  h1 { font-size: var(--size-h1); }
+  h2 { font-size: var(--size-h2); }
+  h3 { font-size: var(--size-h3); }
+  p { margin: 0 0 var(--space-4); max-width: 66ch; }
+  .muted { color: var(--color-text-muted); }
+  .caption { font-size: var(--size-caption); color: var(--color-text-muted); }
+  .mono { font-family: var(--font-mono); }
+  .grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .swatch { border: var(--border-width) solid var(--color-border); border-radius: var(--radius-sm); overflow: hidden; background: var(--color-surface); }
+  .swatch .chip { height: 72px; }
+  .swatch .meta { padding: var(--space-2); font-size: var(--size-caption); }
+  .scale-row { display: flex; align-items: baseline; gap: var(--space-4); padding: var(--space-2) 0; border-bottom: var(--border-width) solid var(--color-border); flex-wrap: wrap; }
+  .scale-row .caption { min-width: 120px; }
+  .space-bar { background: var(--color-primary); height: var(--space-2); }
+  .card { background: var(--color-surface); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-sm); padding: var(--space-4); box-shadow: var(--shadow-raised); }
+  .btn { font: inherit; font-weight: var(--weight-bold); padding: var(--space-2) var(--space-4); border-radius: var(--radius-sm); border: var(--border-width) solid var(--color-primary); background: var(--color-primary); color: var(--color-on-primary); cursor: pointer; transition: transform var(--duration-standard) var(--easing-standard); }
+  .btn.secondary { background: transparent; color: var(--color-primary); }
+  .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+  .btn:active { transform: translateY(1px); }
+  input[type="text"] { font: inherit; padding: var(--space-2); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-text); width: 100%; max-width: 320px; }
+  .alert { padding: var(--space-2) var(--space-4); border-left: 4px solid currentColor; margin-bottom: var(--space-2); }
+  table { border-collapse: collapse; width: 100%; font-size: var(--size-caption); }
+  th, td { text-align: left; padding: var(--space-2); border-bottom: var(--border-width) solid var(--color-border); vertical-align: top; }
+  .motion-demo { animation: demo 2s var(--easing-standard) infinite alternate; }
+  @keyframes demo { from { transform: translateX(0); } to { transform: translateX(200px); } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <p class="caption">[System name] · Version [0.1.0] · [YYYY-MM-DD]</p>
+    <h1>[User's real headline]</h1>
+    <p>[User's real paragraph, so every choice is judged on the words it will carry.]</p>
+  </header>
+
+  <section id="principles">
+    <h2>Principles</h2>
+    <ol>
+      <li><strong>[Principle]</strong> — [the choice and what it gives up]</li>
+    </ol>
+  </section>
+
+  <section id="colour">
+    <h2>Colour</h2>
+    <p class="muted">[Colour strategy in one line.]</p>
+    <div class="grid">
+      <!-- One swatch per colour role. -->
+      <div class="swatch">
+        <div class="chip" style="background: var(--color-primary)"></div>
+        <div class="meta"><strong>Primary</strong><br><span class="mono">[oklch(…) · #hex]</span><br>[Role] · [label, source]</div>
+      </div>
+    </div>
+    <h3 style="margin-top: var(--space-8)">Contrast</h3>
+    <table>
+      <thead><tr><th>Text</th><th>Background</th><th>WCAG</th><th>APCA</th><th>Use</th></tr></thead>
+      <tbody><tr><td>[text]</td><td>[bg]</td><td>[ratio]</td><td>[Lc]</td><td>[body / large / UI]</td></tr></tbody>
+    </table>
+  </section>
+
+  <section id="type">
+    <h2>Typography</h2>
+    <p class="muted">[Faces, licences and why they pair.]</p>
+    <div class="scale-row"><span class="caption">H1 · [size/line height]</span><span style="font-family: var(--font-display); font-size: var(--size-h1); line-height: var(--lh-heading)">[Real headline]</span></div>
+    <div class="scale-row"><span class="caption">H2</span><span style="font-family: var(--font-display); font-size: var(--size-h2); line-height: var(--lh-heading)">[Real subheading]</span></div>
+    <div class="scale-row"><span class="caption">H3</span><span style="font-family: var(--font-display); font-size: var(--size-h3)">[Real section title]</span></div>
+    <div class="scale-row"><span class="caption">Body</span><span>[Real paragraph]</span></div>
+    <div class="scale-row"><span class="caption">Caption</span><span class="caption">[Real caption]</span></div>
+    <div class="scale-row"><span class="caption">Mono / numerals</span><span class="mono">0123456789 · [real figures, e.g. prices or dates]</span></div>
+  </section>
+
+  <section id="space">
+    <h2>Space and layout</h2>
+    <p class="muted">[Density, base unit, grid.]</p>
+    <div class="scale-row"><span class="caption">space-1</span><div class="space-bar" style="width: var(--space-1)"></div></div>
+    <div class="scale-row"><span class="caption">space-2</span><div class="space-bar" style="width: var(--space-2)"></div></div>
+    <div class="scale-row"><span class="caption">space-4</span><div class="space-bar" style="width: var(--space-4)"></div></div>
+    <div class="scale-row"><span class="caption">space-8</span><div class="space-bar" style="width: var(--space-8)"></div></div>
+    <div class="scale-row"><span class="caption">space-16</span><div class="space-bar" style="width: var(--space-16)"></div></div>
+  </section>
+
+  <section id="shape">
+    <h2>Shape and elevation</h2>
+    <div class="card"><h3>[Card title]</h3><p>[Real content showing radius, border and elevation together.]</p></div>
+  </section>
+
+  <section id="components">
+    <h2>Components</h2>
+    <p>
+      <button class="btn">[Primary action]</button>
+      <button class="btn secondary">[Secondary action]</button>
+    </p>
+    <p><label>[Field label]<br><input type="text" placeholder="[Real example input]"></label></p>
+    <div class="alert" style="color: var(--color-success)">[Success message in the system's voice]</div>
+    <div class="alert" style="color: var(--color-warning)">[Warning message]</div>
+    <div class="alert" style="color: var(--color-error)">[Error message]</div>
+    <div class="alert" style="color: var(--color-info)">[Info message]</div>
+  </section>
+
+  <section id="motion">
+    <h2>Motion and interaction</h2>
+    <p class="muted">[Motion character, signature motion, durations and easing. Every example here runs live; replace the demo with the system's own motion for each medium.]</p>
+    <div class="card" style="overflow: hidden;">
+      <div class="motion-demo" style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--color-primary);"></div>
+      <p class="caption">[Signature motion: what it is and when it plays.]</p>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2>Data and infographics</h2>
+    <p class="muted">[Chart palette, how the key value is marked without colour alone, chart types in the kit, stat treatment. Use the user's real numbers.]</p>
+  </section>
+
+  <section id="imagery-voice">
+    <h2>Imagery and voice</h2>
+    <p class="muted">[Photography, illustration and icon rules, with examples if available.]</p>
+    <p><strong>Words we use:</strong> [list] · <strong>Words we avoid:</strong> [list]</p>
+  </section>
+
+  <section id="log">
+    <h2>Decision summary</h2>
+    <table>
+      <thead><tr><th>ID</th><th>Decision</th><th>Choice</th><th>Label</th><th>Source</th></tr></thead>
+      <tbody><tr><td>[D2]</td><td>[Signature colour]</td><td>[value]</td><td>[bespoke / AI default]</td><td>[source]</td></tr></tbody>
+    </table>
+    <p class="caption">Full log and reasons in DESIGN.md.</p>
+  </section>
+
+</main>
+</body>
+</html>

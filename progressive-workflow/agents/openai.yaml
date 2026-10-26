@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive Workflow"
+  short_description: "Design the expert process for a big task, run it, keep it"
+  default_prompt: "Use $progressive-workflow to design the right flow for this task, run it with approval gates, and save it."
