@@ -1,0 +1,4 @@
+interface:
+  display_name: "Progressive Knowledge"
+  short_description: "The standard the best practitioners work to, not the typical answer"
+  default_prompt: "Use $progressive-knowledge to define what best means for this task, research the elite standard, and do or rebuild the work to that bar."
