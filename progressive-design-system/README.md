@@ -55,7 +55,7 @@ To install only this skill, run `npx skills add 0xlloyd/progressive-skills --ski
 
 ## Works with
 
-Works on its own. Web search makes the research stronger; without it, the skill researches from what the model knows and says which facts, especially font licences, need checking. It closes every run with [progressive-skill-improvement](../progressive-skill-improvement/README.md), which proposes evidence-backed edits to this skill for you to approve. If that skill isn't installed, it suggests the improvements directly.
+For a system that already lives in code (extracting, auditing, migrating or documenting tokens and components), use the design kit's `design-kit-design-system` instead. Works on its own. Web search makes the research stronger; without it, the skill researches from what the model knows and says which facts, especially font licences, need checking. It closes every run with [progressive-skill-improvement](../progressive-skill-improvement/README.md), which proposes evidence-backed edits to this skill for you to approve. If that skill isn't installed, it suggests the improvements directly.
 
 ## License
 
